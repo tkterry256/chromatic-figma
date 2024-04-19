@@ -1,0 +1,923 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "PricingPlan",
+            "id": "interface-PricingPlan-df2da198fda96eb03e9afe44e9dbd26549c073c5add633cc4c68d41ffef28e70ae613abe23994645a8f5516e3f1428bfe66b54097c1a74f0325ed8ae535f2e56",
+            "file": "src/app/interfaces/pricing-plan.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface PricingPlan {\r\n  name: string;\r\n  tagline: string;\r\n  price?: number;\r\n  priceMode: 'free' | 'custom' | 'price';\r\n  priceRate: 'lifetime' | 'year';\r\n  link?: string;\r\n  isRecommended: boolean;\r\n  cta: string; // call to action text\r\n  features: string[];\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "cta",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "features",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "isRecommended",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "link",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "priceMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"free\" | \"custom\" | \"price\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "priceRate",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"lifetime\" | \"year\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "tagline",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Product",
+            "id": "interface-Product-1ae1f22390abcee33f0bbafaf891112e98f13de8770e6ac58c0913041c822222cea78768f9a6340d6219bf1683d5b3ef6b69272f80cccfc6b964e5bed27beda0",
+            "file": "src/app/product.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Product {\r\n  id: number;\r\n  name: string;\r\n  description: string;\r\n  currentPrice: number;\r\n  discountedFrom?: number;\r\n  amountInCart: number;\r\n  productImage: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "amountInCart",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "currentPrice",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "discountedFrom",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "productImage",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-cf1d92f4aa7b250cd645bf9747d5977587c5886cbfe410c3ea11523cd2c6b332ad8143e93362d8083271ddd21a852b3440efa8e56966bbea24b19346f95587e8",
+            "file": "src/app/app.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "pricingPlans",
+                    "defaultValue": "mockPricingPlans",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PricingPlan[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "PricingPlanComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { PricingPlan } from './interfaces/pricing-plan';\r\nimport { PricingPlanComponent } from './components/pricing-plan/pricing-plan.component';\r\nimport { mockPricingPlans } from './mock-data/mock-pricing-plans';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, PricingPlanComponent],\r\n  templateUrl: './app.component.html',\r\n  styleUrl: './app.component.css',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  host: {\r\n    class: 'p-3 flex justify-center items-center h-dvh bg-slate-800 *:min-h-0',\r\n  },\r\n})\r\nexport class AppComponent {\r\n  pricingPlans: PricingPlan[] = mockPricingPlans;\r\n}\r\n",
+            "styleUrl": "./app.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div\r\n  class=\"w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-auto max-h-full\"\r\n>\r\n  @for (plan of pricingPlans; track $index) {\r\n    <app-pricing-plan [plan]=\"plan\" className=\"flex-1\"></app-pricing-plan>\r\n  }\r\n</div>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-406813810b3aa6d250b1106e4ae79d8ee2ca876c99d22b3f998fc73837ad5ded5f77bbd695d31a1b9a588ceda86def50e5436fdb0a28ce8b218f13e23454ac64",
+            "file": "src/app/components/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "[app-button]",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "className",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 921,
+                            "end": 948,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 351,
+                            "tagName": {
+                                "pos": 922,
+                                "end": 926,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "type"
+                            },
+                            "comment": "",
+                            "typeExpression": {
+                                "pos": 927,
+                                "end": 941,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 316,
+                                "type": {
+                                    "pos": 928,
+                                    "end": 939,
+                                    "flags": 16777216,
+                                    "modifierFlagsCache": 0,
+                                    "transformFlags": 1,
+                                    "kind": 183,
+                                    "typeName": {
+                                        "pos": 928,
+                                        "end": 939,
+                                        "flags": 16777216,
+                                        "modifierFlagsCache": 0,
+                                        "transformFlags": 0,
+                                        "kind": 80,
+                                        "escapedText": "ClassValue"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "pos": 948,
+                            "end": 969,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 949,
+                                "end": 961,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "defaultValue"
+                            },
+                            "comment": "<p>&#39;&#39;</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nInput property for additional custom classes to apply to the button.\n",
+                    "description": "<p>Input property for additional custom classes to apply to the button.</p>\n",
+                    "line": 40,
+                    "type": "ClassValue",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'filled'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 751,
+                            "end": 778,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 752,
+                                "end": 764,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "defaultValue"
+                            },
+                            "comment": "<p>&#39;filled&#39;</p>\n"
+                        }
+                    ],
+                    "rawdescription": "\n\nInput property defining the variant of the button.\n",
+                    "description": "<p>Input property defining the variant of the button.</p>\n",
+                    "line": 32,
+                    "type": "ButtonVariant",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { ClassValue, cn } from '../../utils';\r\n\r\nexport type ButtonVariant = 'filled' | 'light' | 'secondary';\r\n\r\nconst VARIANT_CLASSES: Record<ButtonVariant, string> = {\r\n  filled: 'bg-indigo-700 text-white',\r\n  light: 'bg-indigo-700/10 text-indigo-700',\r\n  secondary: 'text-indigo-700 bg-white',\r\n};\r\n\r\nconst DEFAULT_CLASSES = 'px-5 py-3 rounded-md text-center align-middle';\r\n\r\n@Component({\r\n  selector: '[app-button]',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /**\r\n   * Input property defining the variant of the button.\r\n   * @defaultValue 'filled'\r\n   */\r\n  @Input()\r\n  variant: ButtonVariant = 'filled';\r\n\r\n  /**\r\n   * Input property for additional custom classes to apply to the button.\r\n   * @type { ClassValue }\r\n   * @defaultValue ''\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      DEFAULT_CLASSES,\r\n      VARIANT_CLASSES[this.variant],\r\n      this.className,\r\n    );\r\n  }\r\n\r\n}\r\n",
+            "styleUrl": "./button.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "klass": {
+                    "name": "klass",
+                    "getSignature": {
+                        "name": "klass",
+                        "type": "",
+                        "returnType": "",
+                        "line": 42
+                    }
+                }
+            },
+            "templateData": "<ng-content></ng-content>\r\n"
+        },
+        {
+            "name": "PricingPlanComponent",
+            "id": "component-PricingPlanComponent-bcbe82a22437b61e47078f3e80d03a77f8712ed36fb8727a0acbb87efd4f5260a8b7510a7324e14160be8b292611c4420be0dfa23f99188e961021ada3ab2b7d",
+            "file": "src/app/components/pricing-plan/pricing-plan.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-pricing-plan",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./pricing-plan.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "className",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 838,
+                            "end": 897,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 839,
+                                "end": 850,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "description"
+                            },
+                            "comment": "<p>Additional CSS classes for customization.</p>\n"
+                        }
+                    ],
+                    "line": 32,
+                    "type": "ClassValue",
+                    "decorators": []
+                },
+                {
+                    "required": true,
+                    "name": "plan",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "optional": false,
+                    "jsdoctags": [
+                        {
+                            "pos": 701,
+                            "end": 753,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 702,
+                                "end": 713,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "description"
+                            },
+                            "comment": "<p>Input for the pricing plan data.</p>\n"
+                        },
+                        {
+                            "pos": 753,
+                            "end": 767,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 754,
+                                "end": 762,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "line": 26,
+                    "type": "PricingPlan",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CurrencyPipe",
+                    "type": "pipe"
+                },
+                {
+                    "name": "TitleCasePipe",
+                    "type": "pipe"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "NgClass"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { PricingPlan } from '../../interfaces/pricing-plan';\r\nimport { CurrencyPipe, NgClass, TitleCasePipe } from '@angular/common';\r\nimport { ClassValue, cn } from '../../utils';\r\nimport { ButtonComponent, ButtonVariant } from '../button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-pricing-plan',\r\n  standalone: true,\r\n  imports: [CurrencyPipe, TitleCasePipe, ButtonComponent, NgClass],\r\n  templateUrl: './pricing-plan.component.html',\r\n  styleUrl: './pricing-plan.component.css',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class PricingPlanComponent {\r\n  /**\r\n   * @description Input for the pricing plan data.\r\n   * @required\r\n   */\r\n  @Input({ required: true })\r\n  plan!: PricingPlan;\r\n\r\n  /**\r\n   * @description Additional CSS classes for customization.\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  get ctaButtonVariant(): ButtonVariant {\r\n    return this.plan.isRecommended\r\n      ? 'secondary'\r\n      : this.plan.link\r\n        ? 'filled'\r\n        : 'light';\r\n  }\r\n\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      'px-4 py-6 rounded flex flex-col gap-7 min-h-[500px]',\r\n      {\r\n        'bg-indigo-800 text-white': this.plan.isRecommended,\r\n        'bg-white text-black': !this.plan.isRecommended,\r\n      },\r\n      this.className,\r\n    );\r\n  }\r\n}\r\n",
+            "styleUrl": "./pricing-plan.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "ctaButtonVariant": {
+                    "name": "ctaButtonVariant",
+                    "getSignature": {
+                        "name": "ctaButtonVariant",
+                        "type": "",
+                        "returnType": "ButtonVariant",
+                        "line": 34
+                    }
+                },
+                "klass": {
+                    "name": "klass",
+                    "getSignature": {
+                        "name": "klass",
+                        "type": "",
+                        "returnType": "",
+                        "line": 43
+                    }
+                }
+            },
+            "templateData": "<div>\r\n  <h2 class=\"text-lg\">{{ plan.name }}</h2>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    {{ plan.tagline }}\r\n  </p>\r\n</div>\r\n\r\n<div>\r\n  <p class=\"text-2xl\">\r\n    @if (plan.priceMode === \"price\") {\r\n      {{ plan.price | currency }}\r\n    } @else {\r\n      {{ plan.priceMode | titlecase }}\r\n    }\r\n  </p>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    @if (plan.priceRate === \"lifetime\") {\r\n      Free for a Lifetime\r\n    } @else if (plan.priceRate === \"year\") {\r\n      /year\r\n    }\r\n  </p>\r\n</div>\r\n\r\n<a\r\n  [href]=\"plan.link\"\r\n  app-button\r\n  [variant]=\"ctaButtonVariant\"\r\n  className=\"font-semibold\"\r\n>\r\n  {{ plan.cta }}\r\n</a>\r\n\r\n<ul class=\"flex flex-col gap-4\">\r\n  @for (feature of plan.features; track $index) {\r\n    <li\r\n      class=\"flex items-center gap-3\"\r\n      [ngClass]=\"{\r\n        'text-gray-800': !plan.isRecommended,\r\n        'text-gray-100': plan.isRecommended\r\n      }\"\r\n    >\r\n      <svg\r\n        width=\"15\"\r\n        height=\"15\"\r\n        viewBox=\"0 0 15 15\"\r\n        fill=\"none\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n      >\r\n        <path\r\n          d=\"M7.5 0C3.35812 0 0 3.35812 0 7.5C0 11.6419 3.35812 15 7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35812 11.6419 0 7.5 0ZM7.5 14.0625C3.88125 14.0625 0.9375 11.1187 0.9375 7.5C0.9375 3.88125 3.88125 0.9375 7.5 0.9375C11.1187 0.9375 14.0625 3.88125 14.0625 7.5C14.0625 11.1187 11.1178 14.0625 7.5 14.0625ZM10.785 4.51687C10.7129 4.46971 10.6321 4.43723 10.5474 4.42127C10.4627 4.40531 10.3757 4.40619 10.2914 4.42386C10.207 4.44154 10.127 4.47565 10.0558 4.52427C9.98461 4.57288 9.92371 4.63504 9.87656 4.70719L6.71156 9.54375L5.19844 8.14312C4.93219 7.8975 4.51688 7.91344 4.27031 8.17969C4.02375 8.44594 4.04063 8.86031 4.30688 9.10687L6.39844 11.0419C6.40594 11.0484 6.41531 11.0503 6.42281 11.0569C6.44156 11.0719 6.45281 11.0925 6.4725 11.1066C6.50063 11.1253 6.5325 11.1291 6.5625 11.1422C6.59812 11.1591 6.63281 11.175 6.67031 11.1853C6.70688 11.1947 6.7425 11.1994 6.78 11.2022C6.83344 11.2078 6.885 11.2078 6.9375 11.2003C6.95906 11.1966 6.97969 11.1909 7.00125 11.1853C7.06594 11.1694 7.12594 11.1441 7.185 11.1084C7.19531 11.1019 7.20375 11.0944 7.21406 11.0878C7.2525 11.0616 7.29375 11.0419 7.32656 11.0062C7.35 10.9809 7.36031 10.9481 7.37906 10.92C7.38 10.9191 7.38188 10.9181 7.38188 10.9172L10.9744 5.42625C11.0698 5.28052 11.1034 5.10288 11.0679 4.93237C11.0324 4.76186 10.9306 4.61242 10.785 4.51687Z\"\r\n          fill=\"#34A853\"\r\n        />\r\n      </svg>\r\n      {{ feature }}\r\n    </li>\r\n  }\r\n</ul>\r\n"
+        },
+        {
+            "name": "ProductCardComponent",
+            "id": "component-ProductCardComponent-f42ffb5e36f76b8fa5722cd0e4af85c513d44e0e62e4fea7b18ac9ad42a301396bde9493a795ab53deea8fbedb02a5d85d3577c2b154296f129d98ffe9b4eb5e",
+            "file": "src/app/components/product-card/product-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-card",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./product-card.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "product",
+                    "defaultValue": "input.required<Product>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "InputSignal<Product>",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CurrencyPipe",
+                    "type": "pipe"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, InputSignal, input, } from '@angular/core';\r\nimport { Product } from '../../product';\r\nimport { CurrencyPipe } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-product-card',\r\n  standalone: true,\r\n  imports: [CurrencyPipe],\r\n  templateUrl: './product-card.component.html',\r\n  styleUrl: './product-card.component.css',\r\n\r\n})\r\nexport class ProductCardComponent {\r\n  product: InputSignal<Product> = input.required<Product>();\r\n}\r\n",
+            "styleUrl": "./product-card.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"p-1 flex justify-center\">\r\n  <img [src]=\"product().productImage\" [alt]=\"product().name\" class=\"w-11/12\" />\r\n</div>\r\n<div class=\"flex flex-col\">\r\n  <span>Name: {{ product().name }}</span>\r\n  <span>Description: {{ product().description }}</span>\r\n  <span>Current Price: {{ product().currentPrice | currency }}</span>\r\n  <span\r\n    >Discounted From: {{ (product().discountedFrom | currency) ?? \"N/A\" }}</span\r\n  >\r\n  <span>Amount in Cart: {{ product().amountInCart }}</span>\r\n</div>\r\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
+            },
+            {
+                "name": "DEFAULT_CLASSES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "'px-5 py-3 rounded-md text-center align-middle'"
+            },
+            {
+                "name": "mockPricingPlans",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/mock-data/mock-pricing-plans.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "PricingPlan[]",
+                "defaultValue": "[\r\n  {\r\n    name: 'Personal',\r\n    tagline: 'Perfect plan for starters',\r\n    priceMode: 'free',\r\n    priceRate: 'lifetime',\r\n    cta: 'Current Plan',\r\n    isRecommended: false,\r\n    features: [\r\n      'Unlimited projects',\r\n      'Share with 2 team members',\r\n      'Sync across devices',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Professional',\r\n    tagline: 'For users who want to do more',\r\n    price: 80,\r\n    priceMode: 'price',\r\n    priceRate: 'year',\r\n    cta: 'Get Started',\r\n    link: '#professional',\r\n    isRecommended: false,\r\n    features: [\r\n      'Unlimited projects',\r\n      'Sync across devices',\r\n      'Share with multiple',\r\n      '30 day version history',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Team',\r\n    tagline: 'Your entire team in one place',\r\n    price: 160,\r\n    priceMode: 'price',\r\n    priceRate: 'year',\r\n    cta: 'Get Started',\r\n    link: '#team',\r\n    isRecommended: true,\r\n    features: [\r\n      'Including professional plan',\r\n      'Collaborative workspace',\r\n      'Unlimited team members',\r\n      'Admin tools',\r\n      'Sharing permissions',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Enterprise',\r\n    tagline: 'Run your company on your terms',\r\n    priceMode: 'custom',\r\n    priceRate: 'lifetime',\r\n    cta: 'Contact Us',\r\n    link: '#enterprise',\r\n    isRecommended: false,\r\n    features: [\r\n      'Including team plan',\r\n      'Advanced security',\r\n      'Custom contract',\r\n      'SAML SSO',\r\n    ],\r\n  },\r\n]"
+            },
+            {
+                "name": "VARIANT_CLASSES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Record<ButtonVariant, string>",
+                "defaultValue": "{\r\n  filled: 'bg-indigo-700 text-white',\r\n  light: 'bg-indigo-700/10 text-indigo-700',\r\n  secondary: 'text-indigo-700 bg-white',\r\n}"
+            }
+        ],
+        "functions": [
+            {
+                "name": "cn",
+                "file": "src/app/utils.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "input",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "dotDotDotToken": true
+                    }
+                ],
+                "returnType": "string",
+                "jsdoctags": [
+                    {
+                        "name": "input",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "dotDotDotToken": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [
+            {
+                "name": "ButtonVariant",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"filled\" | \"light\" | \"secondary\"",
+                "file": "src/app/components/button/button.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [provideRouter(routes)]\r\n}"
+                }
+            ],
+            "src/app/components/button/button.component.ts": [
+                {
+                    "name": "DEFAULT_CLASSES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "'px-5 py-3 rounded-md text-center align-middle'"
+                },
+                {
+                    "name": "VARIANT_CLASSES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Record<ButtonVariant, string>",
+                    "defaultValue": "{\r\n  filled: 'bg-indigo-700 text-white',\r\n  light: 'bg-indigo-700/10 text-indigo-700',\r\n  secondary: 'text-indigo-700 bg-white',\r\n}"
+                }
+            ],
+            "src/app/mock-data/mock-pricing-plans.ts": [
+                {
+                    "name": "mockPricingPlans",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/mock-data/mock-pricing-plans.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PricingPlan[]",
+                    "defaultValue": "[\r\n  {\r\n    name: 'Personal',\r\n    tagline: 'Perfect plan for starters',\r\n    priceMode: 'free',\r\n    priceRate: 'lifetime',\r\n    cta: 'Current Plan',\r\n    isRecommended: false,\r\n    features: [\r\n      'Unlimited projects',\r\n      'Share with 2 team members',\r\n      'Sync across devices',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Professional',\r\n    tagline: 'For users who want to do more',\r\n    price: 80,\r\n    priceMode: 'price',\r\n    priceRate: 'year',\r\n    cta: 'Get Started',\r\n    link: '#professional',\r\n    isRecommended: false,\r\n    features: [\r\n      'Unlimited projects',\r\n      'Sync across devices',\r\n      'Share with multiple',\r\n      '30 day version history',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Team',\r\n    tagline: 'Your entire team in one place',\r\n    price: 160,\r\n    priceMode: 'price',\r\n    priceRate: 'year',\r\n    cta: 'Get Started',\r\n    link: '#team',\r\n    isRecommended: true,\r\n    features: [\r\n      'Including professional plan',\r\n      'Collaborative workspace',\r\n      'Unlimited team members',\r\n      'Admin tools',\r\n      'Sharing permissions',\r\n    ],\r\n  },\r\n  {\r\n    name: 'Enterprise',\r\n    tagline: 'Run your company on your terms',\r\n    priceMode: 'custom',\r\n    priceRate: 'lifetime',\r\n    cta: 'Contact Us',\r\n    link: '#enterprise',\r\n    isRecommended: false,\r\n    features: [\r\n      'Including team plan',\r\n      'Advanced security',\r\n      'Custom contract',\r\n      'SAML SSO',\r\n    ],\r\n  },\r\n]"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/utils.ts": [
+                {
+                    "name": "cn",
+                    "file": "src/app/utils.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "input",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "dotDotDotToken": true
+                        }
+                    ],
+                    "returnType": "string",
+                    "jsdoctags": [
+                        {
+                            "name": "input",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "dotDotDotToken": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/app/components/button/button.component.ts": [
+                {
+                    "name": "ButtonVariant",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"filled\" | \"light\" | \"secondary\"",
+                    "file": "src/app/components/button/button.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 4,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 50,
+                "coverageCount": "2/4",
+                "status": "medium"
+            },
+            {
+                "filePath": "src/app/components/button/button.component.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DEFAULT_CLASSES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.component.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "VARIANT_CLASSES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/pricing-plan/pricing-plan.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PricingPlanComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/product-card/product-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/interfaces/pricing-plan.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "PricingPlan",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/mock-data/mock-pricing-plans.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "mockPricingPlans",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Product",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/utils.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "cn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

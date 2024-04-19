@@ -1,0 +1,7 @@
+<div
+  class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-auto max-h-full"
+>
+  @for (plan of pricingPlans; track $index) {
+    <app-pricing-plan [plan]="plan" className="flex-1"></app-pricing-plan>
+  }
+</div>

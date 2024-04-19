@@ -1,0 +1,12 @@
+<div class="p-1 flex justify-center">
+  <img [src]="product().productImage" [alt]="product().name" class="w-11/12" />
+</div>
+<div class="flex flex-col">
+  <span>Name: {{ product().name }}</span>
+  <span>Description: {{ product().description }}</span>
+  <span>Current Price: {{ product().currentPrice | currency }}</span>
+  <span
+    >Discounted From: {{ (product().discountedFrom | currency) ?? "N/A" }}</span
+  >
+  <span>Amount in Cart: {{ product().amountInCart }}</span>
+</div>

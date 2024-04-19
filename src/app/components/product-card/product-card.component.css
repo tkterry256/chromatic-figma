@@ -1,0 +1,4 @@
+:host {
+  display: block;
+  @apply max-w-xs flex flex-col border p-2 bg-white;
+}
