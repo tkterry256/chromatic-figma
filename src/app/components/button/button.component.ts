@@ -14,7 +14,7 @@ const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   secondary: 'text-indigo-700 bg-white',
 };
 
-const DEFAULT_CLASSES = 'px-5 py-3 rounded-md text-center align-middle';
+const DEFAULT_CLASSES = 'px-5 py-2.5 rounded-md text-center align-middle';
 
 @Component({
   selector: '[app-button]',

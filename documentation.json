@@ -243,7 +243,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-406813810b3aa6d250b1106e4ae79d8ee2ca876c99d22b3f998fc73837ad5ded5f77bbd695d31a1b9a588ceda86def50e5436fdb0a28ce8b218f13e23454ac64",
+            "id": "component-ButtonComponent-c7dd507dcfd51efe6a991ee1bc3837cfd2bc7e1abb8c05f542b054aabc0a245b4b865e1db9d0c69f027f7f127a7cf0b977ccf8bfd47a38e4e88fcd339110e397",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -266,15 +266,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 921,
-                            "end": 948,
+                            "pos": 923,
+                            "end": 950,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 351,
                             "tagName": {
-                                "pos": 922,
-                                "end": 926,
+                                "pos": 924,
+                                "end": 928,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -283,22 +283,22 @@
                             },
                             "comment": "",
                             "typeExpression": {
-                                "pos": 927,
-                                "end": 941,
+                                "pos": 929,
+                                "end": 943,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
                                 "kind": 316,
                                 "type": {
-                                    "pos": 928,
-                                    "end": 939,
+                                    "pos": 930,
+                                    "end": 941,
                                     "flags": 16777216,
                                     "modifierFlagsCache": 0,
                                     "transformFlags": 1,
                                     "kind": 183,
                                     "typeName": {
-                                        "pos": 928,
-                                        "end": 939,
+                                        "pos": 930,
+                                        "end": 941,
                                         "flags": 16777216,
                                         "modifierFlagsCache": 0,
                                         "transformFlags": 0,
@@ -309,15 +309,15 @@
                             }
                         },
                         {
-                            "pos": 948,
-                            "end": 969,
+                            "pos": 950,
+                            "end": 971,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 949,
-                                "end": 961,
+                                "pos": 951,
+                                "end": 963,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -340,15 +340,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 751,
-                            "end": 778,
+                            "pos": 753,
+                            "end": 780,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 752,
-                                "end": 764,
+                                "pos": 754,
+                                "end": 766,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -386,7 +386,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { ClassValue, cn } from '../../utils';\r\n\r\nexport type ButtonVariant = 'filled' | 'light' | 'secondary';\r\n\r\nconst VARIANT_CLASSES: Record<ButtonVariant, string> = {\r\n  filled: 'bg-indigo-700 text-white',\r\n  light: 'bg-indigo-700/10 text-indigo-700',\r\n  secondary: 'text-indigo-700 bg-white',\r\n};\r\n\r\nconst DEFAULT_CLASSES = 'px-5 py-3 rounded-md text-center align-middle';\r\n\r\n@Component({\r\n  selector: '[app-button]',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /**\r\n   * Input property defining the variant of the button.\r\n   * @defaultValue 'filled'\r\n   */\r\n  @Input()\r\n  variant: ButtonVariant = 'filled';\r\n\r\n  /**\r\n   * Input property for additional custom classes to apply to the button.\r\n   * @type { ClassValue }\r\n   * @defaultValue ''\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      DEFAULT_CLASSES,\r\n      VARIANT_CLASSES[this.variant],\r\n      this.className,\r\n    );\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { ClassValue, cn } from '../../utils';\r\n\r\nexport type ButtonVariant = 'filled' | 'light' | 'secondary';\r\n\r\nconst VARIANT_CLASSES: Record<ButtonVariant, string> = {\r\n  filled: 'bg-indigo-700 text-white',\r\n  light: 'bg-indigo-700/10 text-indigo-700',\r\n  secondary: 'text-indigo-700 bg-white',\r\n};\r\n\r\nconst DEFAULT_CLASSES = 'px-5 py-2.5 rounded-md text-center align-middle';\r\n\r\n@Component({\r\n  selector: '[app-button]',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.css',\r\n})\r\nexport class ButtonComponent {\r\n  /**\r\n   * Input property defining the variant of the button.\r\n   * @defaultValue 'filled'\r\n   */\r\n  @Input()\r\n  variant: ButtonVariant = 'filled';\r\n\r\n  /**\r\n   * Input property for additional custom classes to apply to the button.\r\n   * @type { ClassValue }\r\n   * @defaultValue ''\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      DEFAULT_CLASSES,\r\n      VARIANT_CLASSES[this.variant],\r\n      this.className,\r\n    );\r\n  }\r\n\r\n}\r\n",
             "styleUrl": "./button.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -407,7 +407,7 @@
         },
         {
             "name": "PricingPlanComponent",
-            "id": "component-PricingPlanComponent-bcbe82a22437b61e47078f3e80d03a77f8712ed36fb8727a0acbb87efd4f5260a8b7510a7324e14160be8b292611c4420be0dfa23f99188e961021ada3ab2b7d",
+            "id": "component-PricingPlanComponent-587e6bd8e3c32fd55eb0e89c557f9d8bfdf390a49d4187c90a5ac34860a52f055cf27d121e7aa54abd5613f32d1d58e3a4988a2da8370afeb88d0f2119df6ad1",
             "file": "src/app/components/pricing-plan/pricing-plan.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -512,7 +512,7 @@
                     "name": "class",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 43,
+                    "line": 42,
                     "type": "any",
                     "decorators": []
                 }
@@ -539,7 +539,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { PricingPlan } from '../../interfaces/pricing-plan';\r\nimport { CurrencyPipe, NgClass, TitleCasePipe } from '@angular/common';\r\nimport { ClassValue, cn } from '../../utils';\r\nimport { ButtonComponent, ButtonVariant } from '../button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-pricing-plan',\r\n  standalone: true,\r\n  imports: [CurrencyPipe, TitleCasePipe, ButtonComponent, NgClass],\r\n  templateUrl: './pricing-plan.component.html',\r\n  styleUrl: './pricing-plan.component.css',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class PricingPlanComponent {\r\n  /**\r\n   * @description Input for the pricing plan data.\r\n   * @required\r\n   */\r\n  @Input({ required: true })\r\n  plan!: PricingPlan;\r\n\r\n  /**\r\n   * @description Additional CSS classes for customization.\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  get ctaButtonVariant(): ButtonVariant {\r\n    return this.plan.isRecommended\r\n      ? 'secondary'\r\n      : this.plan.link\r\n        ? 'filled'\r\n        : 'light';\r\n  }\r\n\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      'px-4 py-6 rounded flex flex-col gap-7 min-h-[500px]',\r\n      {\r\n        'bg-indigo-800 text-white': this.plan.isRecommended,\r\n        'bg-white text-black': !this.plan.isRecommended,\r\n      },\r\n      this.className,\r\n    );\r\n  }\r\n}\r\n",
+            "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  Input,\r\n} from '@angular/core';\r\nimport { PricingPlan } from '../../interfaces/pricing-plan';\r\nimport { CurrencyPipe, NgClass, TitleCasePipe } from '@angular/common';\r\nimport { ClassValue, cn } from '../../utils';\r\nimport { ButtonComponent, ButtonVariant } from '../button/button.component';\r\n\r\n@Component({\r\n  selector: 'app-pricing-plan',\r\n  standalone: true,\r\n  imports: [CurrencyPipe, TitleCasePipe, ButtonComponent, NgClass],\r\n  templateUrl: './pricing-plan.component.html',\r\n  styleUrl: './pricing-plan.component.css',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class PricingPlanComponent {\r\n  /**\r\n   * @description Input for the pricing plan data.\r\n   * @required\r\n   */\r\n  @Input({ required: true })\r\n  plan!: PricingPlan;\r\n\r\n  /**\r\n   * @description Additional CSS classes for customization.\r\n   */\r\n  @Input()\r\n  className: ClassValue = '';\r\n\r\n  get ctaButtonVariant(): ButtonVariant {\r\n    return this.plan.isRecommended\r\n      ? 'secondary'\r\n      : this.plan.link\r\n        ? 'filled'\r\n        : 'light';\r\n  }\r\n\r\n  @HostBinding('class') get klass() {\r\n    return cn(\r\n      'px-4 py-6 rounded flex flex-col gap-7 min-h-[500px]',\r\n      {\r\n        'bg-indigo-800 text-white': this.plan.isRecommended,\r\n        'bg-white text-black': !this.plan.isRecommended,\r\n      },\r\n      this.className,\r\n    );\r\n  }\r\n}\r\n",
             "styleUrl": "./pricing-plan.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -561,11 +561,11 @@
                         "name": "klass",
                         "type": "",
                         "returnType": "",
-                        "line": 43
+                        "line": 42
                     }
                 }
             },
-            "templateData": "<div>\r\n  <h2 class=\"text-lg\">{{ plan.name }}</h2>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    {{ plan.tagline }}\r\n  </p>\r\n</div>\r\n\r\n<div>\r\n  <p class=\"text-2xl\">\r\n    @if (plan.priceMode === \"price\") {\r\n      {{ plan.price | currency }}\r\n    } @else {\r\n      {{ plan.priceMode | titlecase }}\r\n    }\r\n  </p>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    @if (plan.priceRate === \"lifetime\") {\r\n      Free for a Lifetime\r\n    } @else if (plan.priceRate === \"year\") {\r\n      /year\r\n    }\r\n  </p>\r\n</div>\r\n\r\n<a\r\n  [href]=\"plan.link\"\r\n  app-button\r\n  [variant]=\"ctaButtonVariant\"\r\n  className=\"font-semibold\"\r\n>\r\n  {{ plan.cta }}\r\n</a>\r\n\r\n<ul class=\"flex flex-col gap-4\">\r\n  @for (feature of plan.features; track $index) {\r\n    <li\r\n      class=\"flex items-center gap-3\"\r\n      [ngClass]=\"{\r\n        'text-gray-800': !plan.isRecommended,\r\n        'text-gray-100': plan.isRecommended\r\n      }\"\r\n    >\r\n      <svg\r\n        width=\"15\"\r\n        height=\"15\"\r\n        viewBox=\"0 0 15 15\"\r\n        fill=\"none\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n      >\r\n        <path\r\n          d=\"M7.5 0C3.35812 0 0 3.35812 0 7.5C0 11.6419 3.35812 15 7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35812 11.6419 0 7.5 0ZM7.5 14.0625C3.88125 14.0625 0.9375 11.1187 0.9375 7.5C0.9375 3.88125 3.88125 0.9375 7.5 0.9375C11.1187 0.9375 14.0625 3.88125 14.0625 7.5C14.0625 11.1187 11.1178 14.0625 7.5 14.0625ZM10.785 4.51687C10.7129 4.46971 10.6321 4.43723 10.5474 4.42127C10.4627 4.40531 10.3757 4.40619 10.2914 4.42386C10.207 4.44154 10.127 4.47565 10.0558 4.52427C9.98461 4.57288 9.92371 4.63504 9.87656 4.70719L6.71156 9.54375L5.19844 8.14312C4.93219 7.8975 4.51688 7.91344 4.27031 8.17969C4.02375 8.44594 4.04063 8.86031 4.30688 9.10687L6.39844 11.0419C6.40594 11.0484 6.41531 11.0503 6.42281 11.0569C6.44156 11.0719 6.45281 11.0925 6.4725 11.1066C6.50063 11.1253 6.5325 11.1291 6.5625 11.1422C6.59812 11.1591 6.63281 11.175 6.67031 11.1853C6.70688 11.1947 6.7425 11.1994 6.78 11.2022C6.83344 11.2078 6.885 11.2078 6.9375 11.2003C6.95906 11.1966 6.97969 11.1909 7.00125 11.1853C7.06594 11.1694 7.12594 11.1441 7.185 11.1084C7.19531 11.1019 7.20375 11.0944 7.21406 11.0878C7.2525 11.0616 7.29375 11.0419 7.32656 11.0062C7.35 10.9809 7.36031 10.9481 7.37906 10.92C7.38 10.9191 7.38188 10.9181 7.38188 10.9172L10.9744 5.42625C11.0698 5.28052 11.1034 5.10288 11.0679 4.93237C11.0324 4.76186 10.9306 4.61242 10.785 4.51687Z\"\r\n          fill=\"#34A853\"\r\n        />\r\n      </svg>\r\n      {{ feature }}\r\n    </li>\r\n  }\r\n</ul>\r\n"
+            "templateData": "<div>\r\n  <h2 class=\"text-lg\">{{ plan.name }}</h2>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    {{ plan.tagline }}\r\n  </p>\r\n</div>\r\n\r\n<div>\r\n  <p class=\"text-xl\">\r\n    @if (plan.priceMode === \"price\") {\r\n      {{ plan.price | currency }}\r\n    } @else {\r\n      {{ plan.priceMode | titlecase }}\r\n    }\r\n  </p>\r\n  <p\r\n    class=\"text-sm\"\r\n    [ngClass]=\"{\r\n      'text-gray-600': !plan.isRecommended,\r\n      'text-gray-300': plan.isRecommended\r\n    }\"\r\n  >\r\n    @if (plan.priceRate === \"lifetime\") {\r\n      Free for a Lifetime\r\n    } @else if (plan.priceRate === \"year\") {\r\n      /year\r\n    }\r\n  </p>\r\n</div>\r\n\r\n<a\r\n  [href]=\"plan.link\"\r\n  app-button\r\n  [variant]=\"ctaButtonVariant\"\r\n  className=\"font-semibold\"\r\n>\r\n  {{ plan.cta }}\r\n</a>\r\n\r\n<ul class=\"flex flex-col gap-4\">\r\n  @for (feature of plan.features; track $index) {\r\n    <li\r\n      class=\"flex items-center gap-3\"\r\n      [ngClass]=\"{\r\n        'text-gray-800': !plan.isRecommended,\r\n        'text-gray-100': plan.isRecommended\r\n      }\"\r\n    >\r\n      <svg\r\n        width=\"15\"\r\n        height=\"15\"\r\n        viewBox=\"0 0 15 15\"\r\n        fill=\"none\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n      >\r\n        <path\r\n          d=\"M7.5 0C3.35812 0 0 3.35812 0 7.5C0 11.6419 3.35812 15 7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35812 11.6419 0 7.5 0ZM7.5 14.0625C3.88125 14.0625 0.9375 11.1187 0.9375 7.5C0.9375 3.88125 3.88125 0.9375 7.5 0.9375C11.1187 0.9375 14.0625 3.88125 14.0625 7.5C14.0625 11.1187 11.1178 14.0625 7.5 14.0625ZM10.785 4.51687C10.7129 4.46971 10.6321 4.43723 10.5474 4.42127C10.4627 4.40531 10.3757 4.40619 10.2914 4.42386C10.207 4.44154 10.127 4.47565 10.0558 4.52427C9.98461 4.57288 9.92371 4.63504 9.87656 4.70719L6.71156 9.54375L5.19844 8.14312C4.93219 7.8975 4.51688 7.91344 4.27031 8.17969C4.02375 8.44594 4.04063 8.86031 4.30688 9.10687L6.39844 11.0419C6.40594 11.0484 6.41531 11.0503 6.42281 11.0569C6.44156 11.0719 6.45281 11.0925 6.4725 11.1066C6.50063 11.1253 6.5325 11.1291 6.5625 11.1422C6.59812 11.1591 6.63281 11.175 6.67031 11.1853C6.70688 11.1947 6.7425 11.1994 6.78 11.2022C6.83344 11.2078 6.885 11.2078 6.9375 11.2003C6.95906 11.1966 6.97969 11.1909 7.00125 11.1853C7.06594 11.1694 7.12594 11.1441 7.185 11.1084C7.19531 11.1019 7.20375 11.0944 7.21406 11.0878C7.2525 11.0616 7.29375 11.0419 7.32656 11.0062C7.35 10.9809 7.36031 10.9481 7.37906 10.92C7.38 10.9191 7.38188 10.9181 7.38188 10.9172L10.9744 5.42625C11.0698 5.28052 11.1034 5.10288 11.0679 4.93237C11.0324 4.76186 10.9306 4.61242 10.785 4.51687Z\"\r\n          fill=\"#34A853\"\r\n        />\r\n      </svg>\r\n      {{ feature }}\r\n    </li>\r\n  }\r\n</ul>\r\n"
         },
         {
             "name": "ProductCardComponent",
@@ -643,7 +643,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "string",
-                "defaultValue": "'px-5 py-3 rounded-md text-center align-middle'"
+                "defaultValue": "'px-5 py-2.5 rounded-md text-center align-middle'"
             },
             {
                 "name": "mockPricingPlans",
@@ -733,7 +733,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
-                    "defaultValue": "'px-5 py-3 rounded-md text-center align-middle'"
+                    "defaultValue": "'px-5 py-2.5 rounded-md text-center align-middle'"
                 },
                 {
                     "name": "VARIANT_CLASSES",
